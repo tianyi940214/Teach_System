@@ -3,10 +3,42 @@ package entity;
 import java.sql.Date;
 
 public class User {
+	public User() {
+		super();
+	}
+
+	public User(String student_id, String student_name, String student_sex,
+			String student_age, String student_address, String student_phone,
+			String student_mailaddress) {
+
+		this.student_id = student_id;
+		this.student_name = student_name;
+		this.student_sex = student_sex;
+		this.student_age = student_age;
+		this.student_address = student_address;
+		this.student_phone = student_phone;
+		this.student_mailaddress = student_mailaddress;
+	}
+	
+	public User(String teacher_id, String teacher_name, String teacher_sex,
+			String teacher_age, String teacher_address,
+			String teacher_phone,String teacher_mailaddress,String teacher_password) {
+
+		this.teacher_id = teacher_id;
+		this.teacher_name = teacher_name;
+		this.teacher_sex = teacher_sex;
+		this.teacher_age = teacher_age;
+		this.teacher_address = teacher_address;
+		this.teacher_phone = teacher_phone;
+		this.teacher_mailaddress = teacher_mailaddress;
+		this.teacher_password=teacher_password;
+	}
+
 	private String student_username;
 	private String student_password;
 	private String teacher_username;
 	private	String teacher_password;
+	
 	public String getStudent_username() {
 		return student_username;
 	}

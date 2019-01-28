@@ -9,7 +9,7 @@
 <body>
 	<center>
         <h1 style="color:red">学生界面</h1>
- 		<form action="select_student" method="post">
+ 		<form action="student_information.jsp">
  		<input type="submit" value="个人基本信息">
  		</form>
  		<form action="login_student" method="post">
