@@ -12,7 +12,7 @@
  		<form action="student_information.jsp">
  		<input type="submit" value="个人基本信息">
  		</form>
- 		<form action="login_student" method="post">
+ 		<form action="select_lesson" method="post">
  		<input type="submit" value="课程选择">
  		</form>
  		<form action="login_student" method="post">

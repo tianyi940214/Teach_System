@@ -39,5 +39,16 @@ public class SelectController {
             modelAndView.setViewName("teacher_information");
             return modelAndView;
 	}
+	@RequestMapping(value="/select_studentdata",method=RequestMethod.POST)
+	public ModelAndView  select2( // 向前台页面传的值放入model中
+            HttpServletRequest request){ // 从前台页面取得的值
+        	String username = request.getParameter("student_name");
+        	User student = Select.select2(username);
+        	System.out.println(student);
+        	ModelAndView modelAndView = new ModelAndView();
+        	modelAndView.addObject("student", student);
+            modelAndView.setViewName("select_student");
+            return modelAndView;
+	}
 
 }

@@ -33,6 +33,28 @@ public class User {
 		this.teacher_mailaddress = teacher_mailaddress;
 		this.teacher_password=teacher_password;
 	}
+	
+		
+
+
+
+
+
+	public User(String teacher_name, String lesson_id, String lesson,
+			String lesson_week, String lesson_time) {
+		super();
+		this.teacher_name = teacher_name;
+		this.lesson_id = lesson_id;
+		this.lesson = lesson;
+		this.lesson_week = lesson_week;
+		this.lesson_time = lesson_time;
+	}
+
+
+
+
+
+
 
 	private String student_username;
 	private String student_password;
@@ -80,7 +102,7 @@ public class User {
 	private String lesson_id;
 	private String lesson;
 	private String lesson_week;
-	private Date lesson_time;
+	private String lesson_time;
 	private String question_id;
 	private String question;
 	private Date time_student;
@@ -191,12 +213,6 @@ public class User {
 	public void setLesson_week(String lesson_week) {
 		this.lesson_week = lesson_week;
 	}
-	public Date getLesson_time() {
-		return lesson_time;
-	}
-	public void setLesson_time(Date lesson_time) {
-		this.lesson_time = lesson_time;
-	}
 	public String getQuestion_id() {
 		return question_id;
 	}
@@ -244,6 +260,14 @@ public class User {
 	}
 	public void setTest_time(Date test_time) {
 		this.test_time = test_time;
+	}
+
+	public String getLesson_time() {
+		return lesson_time;
+	}
+
+	public void setLesson_time(String lesson_time) {
+		this.lesson_time = lesson_time;
 	}
 	
 }
