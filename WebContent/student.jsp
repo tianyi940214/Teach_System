@@ -9,10 +9,10 @@
 <body>
 	<center>
         <h1 style="color:red">学生界面</h1>
- 		<form action="student_information.jsp">
+ 		<form action="student_information">
  		<input type="submit" value="个人基本信息">
  		</form>
- 		<form action="select_lesson" method="post">
+ 		<form action="select_lesson.jsp" method="post">
  		<input type="submit" value="课程选择">
  		</form>
  		<form action="login_student" method="post">
@@ -21,7 +21,7 @@
  		<form action="login_student" method="post">
  		<input type="submit" value="课程学习">
  		</form>
- 		<form action="login_student" method="post">
+ 		<form action="question.jsp">
  		<input type="submit" value="提问">
  		</form>
  		<form action="login_student" method="post">
