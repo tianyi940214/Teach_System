@@ -10,8 +10,22 @@
 	<center>
         <h1 style="color:red">学生提问界面</h1>
  		<form action="questiondata" method="post">
+ 		<table width="300" height = "20" border="0" bordercolor="#A0A0A0">
+  	  <tr>
+		<th>姓名：</th>
+		<td><input type="text" name="student_name"></td>
+ 	  </tr>
+ 	  <tr>
+		<th>课程名称：</th>
+		<td><input type="text" name="lesson"></td>
+ 	  </tr>
+ 	  <tr>
+		<th>任课老师：</th>
+		<td><input type="text" name="teacher_name"></td>
+ 	  </tr>
+ 	  </table>
  		<label><strong>提问内容：</strong></label><br>
-    <textarea  name="questiondata" cols="50" rows="10">在这里输入内容...</textarea><br>
+    <textarea  name="questiondata" cols="50" rows="10"></textarea><br>
     <input type="submit" value="确定"  name="submit" />
  		</form>
     </center>

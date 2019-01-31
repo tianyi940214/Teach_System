@@ -11,30 +11,42 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import entity.User;
 import service.Question;
 
 @Controller
 public class QuestionController {
 	@RequestMapping(value="/questiondata",method=RequestMethod.POST)
-	public String login(HttpServletResponse response, // 向前台页面传的值放入model中
-            HttpServletRequest request) throws IOException{ // 从前台页面取得的值
+	public String question(HttpServletResponse response, 
+            HttpServletRequest request) throws IOException{
         String questiondata = request.getParameter("questiondata");
-        System.out.println(questiondata);
-        String question = Question.questionSave(questiondata);
+        System.out.println(questiondata);     
         response.setCharacterEncoding("UTF-8");  
         response.setHeader("Content-type", "text/html;charset=UTF-8");  
         PrintWriter out = null;
-        
-        if(questiondata != null && questiondata != ""){
+        String student_name = request.getParameter("student_name");
+        String lesson = request.getParameter("lesson");
+        String teacher_name = request.getParameter("teacher_name");
+        System.out.println(student_name + lesson + teacher_name);
+        if(questiondata == null || questiondata == ""){
         	out = response.getWriter();  
-        	out.print("<script>alert('" + "问题提交成功" + "');window.location.href='"  
-                    + "/Teach_System/question.jsp" + "';</script>"); 
+        	out.print("<script>alert('" + "问题提交失败，请输入文字" + "');window.location.href='"  
+                    + "/Teach_System/question_student.jsp" + "';</script>"); 
         	out.flush();
         }else{
-        	out = response.getWriter();  
-        	out.print("<script>alert('" + "问题提交失败" + "');window.location.href='"  
-                    + "/Teach_System/question.jsp" + "';</script>"); 
-        	out.flush();  
+            String user = Question.dataSave(student_name, lesson, teacher_name,questiondata);
+        	if (user == null || user == "") {
+        		out = response.getWriter();  
+	        	out.print("<script>alert('" + "请检查姓名，课程和任课老师是否填写正确" + "');window.location.href='"  
+	                    + "/Teach_System/question_student.jsp" + "';</script>"); 
+	        	out.flush();
+			} else {
+				out = response.getWriter();  
+	        	out.print("<script>alert('" + "问题提交成功" + "');window.location.href='"  
+	                    + "/Teach_System/question_student.jsp" + "';</script>"); 
+	        	out.flush();  
+			}
+        	
         }
 	return null;
 	}

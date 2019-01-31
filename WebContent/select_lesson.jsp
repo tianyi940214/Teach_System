@@ -24,10 +24,27 @@
 				<td>${lessonselect.lesson_week}</td>
 				<td>${lessonselect.lesson_time}</td>
 				<td>${lessonselect.teacher_name}</td>
-			</tr>
 			</c:forEach>
 			</table>
+			<br>
+			<br>
+			<form action="add_lesson" method="post">
+
+					<br>请确认选课编号：
+					<select name="add_lesson">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					</select>
+			 		<input type="submit" value="确认选课">
+			 </form>
             <form action="teacher.jsp">
+            <br>
+            <br>
                 <input type="submit" value="返回" style="color:#BC8F8F">
             </form>
     </center>

@@ -35,7 +35,7 @@ public class User {
 	}
 	
 		
-
+		
 
 
 
@@ -48,6 +48,25 @@ public class User {
 		this.lesson = lesson;
 		this.lesson_week = lesson_week;
 		this.lesson_time = lesson_time;
+	}
+
+	
+
+
+
+
+
+	public User(String student_id, String student_name, String teacher_id,
+			String teacher_name, String lesson, Date time_student,
+			Date time_teacher) {
+		super();
+		this.student_id = student_id;
+		this.student_name = student_name;
+		this.teacher_id = teacher_id;
+		this.teacher_name = teacher_name;
+		this.lesson = lesson;
+		this.time_student = time_student;
+		this.time_teacher = time_teacher;
 	}
 
 
