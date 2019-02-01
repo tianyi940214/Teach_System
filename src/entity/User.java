@@ -69,12 +69,45 @@ public class User {
 		this.time_teacher = time_teacher;
 	}
 
+		
+		
+
+
+
+	public User(String schedule_week, String schedule_time, String student_id,
+			String student_name, String teacher_name, String lesson) {
+		super();
+		this.schedule_week = schedule_week;
+		this.schedule_time = schedule_time;
+		this.student_id = student_id;
+		this.student_name = student_name;
+		this.teacher_name = teacher_name;
+		this.lesson = lesson;
+	}
+
+	public String getSchedule_week() {
+		return schedule_week;
+	}
+
+	public void setSchedule_week(String schedule_week) {
+		this.schedule_week = schedule_week;
+	}
+
+	public String getSchedule_time() {
+		return schedule_time;
+	}
+
+	public void setSchedule_time(String schedule_time) {
+		this.schedule_time = schedule_time;
+	}
 
 
 
 
 
 
+	private String schedule_week;
+	private String schedule_time;
 	private String student_username;
 	private String student_password;
 	private String teacher_username;

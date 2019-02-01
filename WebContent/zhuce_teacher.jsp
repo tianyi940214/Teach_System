@@ -45,8 +45,8 @@
  	  </tr>
  	  <tr>
  		<th>性别：</th>
- 		<td><input type="radio" name="teacher_sex" value="man" checked="checked">男
- 		<input type="radio" name="teacher_sex" value="woman">女</td>
+ 		<td><input type="radio" name="teacher_sex" value="男" checked="checked">男
+ 		<input type="radio" name="teacher_sex" value="女">女</td>
  	  </tr>
  	  
 	  <tr>

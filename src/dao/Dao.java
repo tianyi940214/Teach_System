@@ -10,7 +10,7 @@ public class Dao {
 public static Connection getConnection(){
         
         Connection conn = null;
-        String url = "jdbc:mysql://localhost:3306/db_database01";
+        String url = "jdbc:mysql://localhost:3306/db_database01?characterEncoding=utf8";
         try
         {
             Class.forName("com.mysql.jdbc.Driver");

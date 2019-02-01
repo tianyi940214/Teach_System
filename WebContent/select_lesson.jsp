@@ -29,7 +29,13 @@
 			<br>
 			<br>
 			<form action="add_lesson" method="post">
-
+					
+					请输入您的用户名：
+					<input type="text" name="student_username">
+					请输入您的姓名：
+                    <input type="text" name="student_name">
+                                                     
+					
 					<br>请确认选课编号：
 					<select name="add_lesson">
 					<option value="1">1</option>
