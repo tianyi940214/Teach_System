@@ -48,7 +48,7 @@
 					</select>
 			 		<input type="submit" value="确认选课">
 			 </form>
-            <form action="teacher.jsp">
+            <form action="student.jsp">
             <br>
             <br>
                 <input type="submit" value="返回" style="color:#BC8F8F">

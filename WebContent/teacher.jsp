@@ -21,7 +21,7 @@
  		<form action="login_student" method="post">
  		<input type="submit" value="课程进度确认">
  		</form>
- 		<form action="question_teacher">
+ 		<form action="select_question" method="post">
  		<input type="submit" value="答疑">
  		</form>
  		<form action="login_student" method="post">
